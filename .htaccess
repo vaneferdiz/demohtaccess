@@ -1,0 +1,10 @@
+DirectoryIndex index.php
+Options All -Indexes
+ErrorDocument 404 /demohtaccess/404.html
+RewriteEngine On
+RewriteRule ^accueil$ index.php
+RewriteRule ^accueil/$ index.php
+#RewriteRule ^hist/$ statique/hist.html
+#RewriteRule ^contact/$ statique/contact.html
+RewriteRule ([a-z]+)/$ statique/$1.html
+RewriteRule ^modele/([0-9])+/$ catalogue.php?modele=$1
